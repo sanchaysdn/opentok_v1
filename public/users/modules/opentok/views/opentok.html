@@ -1,0 +1,24 @@
+<style type="text/css" media="screen">
+    ot-publisher,
+    ot-subscriber,
+    ot-layout {
+        display: block;
+        overflow: hidden;
+    }
+    
+    ot-layout {
+        position: absolute;
+        top: 0;
+        left: 0;
+        right: 0;
+        bottom: 0;
+    }
+</style>
+<div ng-controller="openTokController">
+    <ot-layout props="{animate:true}">
+        <ot-subscriber ng-repeat="stream in streams" stream="stream" props="{style: {nameDisplayMode: 'on'}}">
+        </ot-subscriber>
+        <ot-publisher id="moderator" props="{style: {nameDisplayMode: 'off'}, resolution: '1280x720', frameRate: 30}">
+        </ot-publisher>
+    </ot-layout>
+</div>

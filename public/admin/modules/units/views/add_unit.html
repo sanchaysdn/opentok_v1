@@ -1,0 +1,79 @@
+<style type="text/css">
+.service-img {}
+
+.service-img ul {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+}
+
+.service-img li {
+    max-width: 180px;
+    float: left;
+    margin-right: 10px;
+    margin-bottom: 10px;
+}
+</style>
+<div class="content-wrapper">
+    <!-- Content Header (Page header) -->
+    <section class="content-header">
+        <h1>Units</h1>
+        <ol class="breadcrumb">
+            <li><a ui-sref="home">Home </a></li>
+            <li ui-sref='units'>Unit</li>
+            <li ng-if="!add" class="active">Add Unit</li>
+            <li ng-if="add" class="active">Edit Unit</li>
+      </ol>
+    </section>
+    
+    <!-- Main content -->
+    <section class="content"> 
+      <!-- Your Page Content Here -->
+      <div class="row">
+        <div class="col-sm-12">
+            <div class="box">
+                <div class="box-header with-border">
+                 <h3 ng-if="!add" class="box-title"><span class="latest-c-icon"><img src="../assets/images/service_list_icon.png" alt=""/></span> Add Unit </h3>
+                 <h3 ng-if="add" class="box-title"><span class="latest-c-icon"><img src="../assets/images/service_list_icon.png" alt=""/></span> Edit Unit </h3>
+                <div class="pull-right"><a ui-sref='units'><i class="fa fa-angle-left margin-r-5" aria-hidden="true"></i> Back</a></div>
+                </div>
+                <!-- /.box-header -->
+                <div class="box-body">
+                    <form role="form" name="form" ng-submit="addUpdateUnitData(form)" novalidate>
+                        <!-- ng-submit="form.$valid&&addUpdateServiceData(form)" -->
+                        <div class="add-service-form clearfix">
+                            <div class="col-sm-6">
+                                <div class="form-group">
+                                    <label for="">Unit Full Name</label>
+                                    <input class="form-control" type="text" name="fullName" ng-model="unit.fullName" maxlength="50" placeholder="Unit Full Name" ng-pattern="/^[a-zA-Z\s]*$/" required>
+                                    <div ng-messages="form.fullName.$error" ng-if="form.fullName.$touched || form.$submitted">
+                                        <div ng-message="required" class="text-danger">Please enter unit full name.</div>
+                                        <div ng-message="pattern" class="text-danger">Accept the alphabets and the spaces only</div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-sm-6">
+                                <div class="form-group">
+                                    <label for="">Unit Short Name</label>
+                                    <input class="form-control" type="text" name="shortName" ng-model="unit.shortName" placeholder="Unit Short Name" ng-pattern="/^[a-zA-Z\s]*$/" required>
+                                    <div ng-messages="form.shortName.$error" ng-if="form.shortName.$touched || form.$submitted">
+                                        <div ng-message="required" class="text-danger">Please enter unit short name</div>
+                                        <div ng-message="pattern" class="text-danger">Accept the alphabets and the spaces only</div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="clearfix"></div>
+                        </div>
+                        <div class="col-sm-12 text-right">
+                            <button type="submit" class="btn btn-primary submit-btn">{{(unit._id) ? 'Update' : 'Submit'}} <i class="fa fa-spinner fa-spin" ng-if="loader"></i></button>
+                        </div>
+                    </form>
+                </div>
+                <!-- /.box-body -->
+            </div>
+            </div>
+            </div>
+        </form>
+    </section>
+    <!-- /.content -->
+</div>

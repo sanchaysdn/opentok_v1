@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+
+<html data-ng-app='iotiedApp'>
+
+<head ng-controller="headerCtrl">
+
+    <meta charset="utf-8">
+
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+
+    <title>Iotied</title>
+
+    <!-- Tell the browser to be responsive to screen width -->
+
+    <meta content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no" name="viewport">
+
+    <!-- Bootstrap 3.3.6 -->
+    <link rel="stylesheet" href="../assets/styles/main.css">
+    <link rel="stylesheet" href="../assets/bootstrap/css/bootstrap.min.css">
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.5.0/css/font-awesome.min.css">
+    <!-- Ionicons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/ionicons/2.0.1/css/ionicons.min.css">
+
+    <!-- Theme style -->
+    <link rel="stylesheet" href="../assets/dist/css/AdminLTE.min.css">
+
+    <link rel="stylesheet" href="../assets/dist/css/skins/skin-blue.min.css">
+    <link href="../bower_components/angular-toastr/dist/angular-toastr.css" rel="stylesheet" />
+
+
+
+    <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
+
+    <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+
+    <!--[if lt IE 9]>
+
+  <script src="https://oss.maxcdn.com/html5shiv/3.7.3/html5shiv.min.js"></script>
+
+  <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
+
+  <![endif]-->
+
+    <!-- iCheck -->
+
+    <link rel="stylesheet" href="../assets/plugins/iCheck/square/blue.css">
+    <link rel="stylesheet" href="../assets/dist/css/style.css">
+</head>
+<!--<body ng-if="userLoggedinnext" class="hold-transition login-page patientLoginBg">-->
+
+<body id="app" ng-class="bodyclass" data-custom-background="" data-off-canvas-nav="">
+
+    <!--<body id="app" data-custom-background="" data-off-canvas-nav=""  class="skin-blue layout-top-nav fixed ">-->
+
+    <!---new-->
+    <div class="wrapper">
+        <section id="header" ng-if="userLoggedinnext" class="top-header topheade affix" data-spy="affix" data-offset-top="60" data-offset-bottom="200">
+            <header ui-view="header"> </header>
+        </section>
+
+        <div class="view-container">
+            <div ui-view="content"></div>
+        </div>
+        <div ui-view="footer"></div>
+    </div>
+    <!---new-->
+
+
+    <script src="javascripts/opentok.min.js" type="text/javascript" charset="utf-8"></script>
+    <script src="../assets/scripts/angular.min.js" type="text/javascript"></script>
+    <script src="../bower_components/angular-ui-router/release/angular-ui-router.min.js" type="text/javascript"></script>
+    <script src="../assets/scripts/angular-route.min.js" type="text/javascript"></script>
+    <script src="../bower_components/angular-resource/angular-resource.min.js" type="text/javascript"></script>
+    <script type="text/javascript" src="../bower_components/angular-toastr/dist/angular-toastr.tpls.js"></script>
+    <script type="text/javascript" src="../bower_components/angular-cookies/angular-cookies.min.js"></script>
+    <script type="text/javascript" src="../bower_components/oclazyload/dist/ocLazyLoad.min.js"></script>
+    <script src="../assets/scripts/logger.min.js" type="text/javascript"></script>
+    <script src="../assets/scripts/bootbox.min.js" type="text/javascript"></script>
+    <script src="../assets/scripts/ngStorage.min.js" type="text/javascript"></script>
+    <script src="../assets/scripts/ng-table.min.js" type="text/javascript"></script>
+    <script src="javascripts/constants.js" type="text/javascript"></script>
+    <!-- JS Application Files start -->
+    <script src="javascripts/app.js" type="text/javascript"></script>
+    <script src="../node_modules/opentok-layout-js/opentok-layout.js" type="text/javascript"></script>
+    <script src="../node_modules/opentok-angular/opentok-angular.js" type="text/javascript"></script>
+    <!-- jQuery 2.2.3 -->
+    <script src="../assets/plugins/jQuery/jquery-2.2.3.min.js"></script>
+    <!-- Bootstrap 3.3.6 -->
+    <script src="../assets/bootstrap/js/bootstrap.min.js"></script>
+    <!-- iCheck -->
+    <script src="../bower_components/angular-cookies/angular-cookies.min.js" type="text/javascript"></script>
+
+</body>
+
+</html>

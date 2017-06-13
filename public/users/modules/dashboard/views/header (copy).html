@@ -1,0 +1,486 @@
+<header class="main-header">
+  <nav class="navbar navbar-static-top" role="navigation"> <a class="logo"><img src="../assets/dist/img/logo.png"  alt=""/></a> 
+    <!-- Navbar Right Menu -->
+    <div class="navbar-custom-menu navbar-right navbarMb">
+      <ul class="nav navbar-nav">
+        <li class=" ">
+        <li class="dropdown messages-menu"> 
+          <!-- Menu toggle button --> 
+          <a href="" class="dropdown-toggle" data-toggle="dropdown"> <i class="fa fa-envelope-o"></i> <span class="label label-success">4</span> </a>
+          <ul class="dropdown-menu">
+            <li class="header">You have 4 messages</li>
+            <li> 
+              <!-- inner menu: contains the messages -->
+              <ul class="menu">
+                <li><!-- start message --> 
+                  <a href="">
+                  <div class="pull-left"> 
+                    <!-- User Image --> 
+                    <img src="../assets/dist/img/user2-160x160.jpg" class="img-circle" alt="User Image"> </div>
+                  <!-- Message title and timestamp -->
+                  <h4> Support Team <small><i class="fa fa-clock-o"></i> 5 mins</small> </h4>
+                  <!-- The message -->
+                  <p>Why not buy a new awesome theme?</p>
+                  </a> </li>
+                <!-- end message -->
+              </ul>
+              <!-- /.menu --> 
+            </li>
+            <li class="footer"><a href="">See All Messages</a></li>
+          </ul>
+        </li>
+        <!-- /.messages-menu --> 
+        
+        <!-- Notifications Menu -->
+        <li class="dropdown notifications-menu"> 
+          <!-- Menu toggle button --> 
+          <a href="" class="dropdown-toggle" data-toggle="dropdown"> <i class="fa fa-bell-o"></i> <span class="label label-warning">10</span> </a>
+          <ul class="dropdown-menu">
+            <li class="header">You have 10 notifications</li>
+            <li> 
+              <!-- Inner Menu: contains the notifications -->
+              <ul class="menu">
+                <li><!-- start notification --> 
+                  <a href=""> <i class="fa fa-users text-aqua"></i> 5 new members joined today </a> </li>
+                <!-- end notification -->
+              </ul>
+            </li>
+            <li class="footer"><a href="">View all</a></li>
+          </ul>
+        </li>
+        <!-- Tasks Menu -->
+        <li class="dropdown tasks-menu"> 
+          <!-- Menu Toggle Button --> 
+          <a href="" class="dropdown-toggle" data-toggle="dropdown"> <i class="fa fa-flag-o"></i> <span class="label label-danger">9</span> </a>
+          <ul class="dropdown-menu">
+            <li class="header">You have 9 tasks</li>
+            <li> 
+              <!-- Inner menu: contains the tasks -->
+              <ul class="menu">
+                <li><!-- Task item --> 
+                  <a href=""> 
+                  <!-- Task title and progress text -->
+                  <h3> Design some buttons <small class="pull-right">20%</small> </h3>
+                  <!-- The progress bar -->
+                  <div class="progress xs"> 
+                    <!-- Change the css width attribute to simulate progress -->
+                    <div class="progress-bar progress-bar-aqua" style="width: 20%" role="progressbar" aria-valuenow="20" aria-valuemin="0" aria-valuemax="100"> <span class="sr-only">20% Complete</span> </div>
+                  </div>
+                  </a> </li>
+                <!-- end task item -->
+              </ul>
+            </li>
+            <li class="footer"> <a href="">View all tasks</a> </li>
+          </ul>
+        </li>
+        <!-- User Account Menu -->
+        <li class="dropdown user user-menu"> 
+          <!-- Menu Toggle Button --> 
+          <a href="" class="dropdown-toggle" data-toggle="dropdown"> 
+          <!-- The user image in the navbar--> 
+          <img src="../assets/dist/img/user2-160x160.jpg" class="user-image" alt="User Image"> 
+          <!-- hidden-xs hides the username on small devices so only the image appears. --> 
+          <span class="hidden-xs">Alexander Pierce</span> </a>
+          <ul class="dropdown-menu">
+            <!-- The user image in the menu -->
+            <li class="user-header"> <img src="../assets/dist/img/user2-160x160.jpg" class="img-circle" alt="User Image">
+              <p> Alexander Pierce - Web Developer <small>Member since Nov. 2012</small> </p>
+            </li>
+            <!-- Menu Body -->
+            <li class="user-body">
+              <div class="row">
+                <div class="col-xs-4 text-center"> <a href="">Followers</a> </div>
+                <div class="col-xs-4 text-center"> <a href="">Sales</a> </div>
+                <div class="col-xs-4 text-center"> <a href="">Friends</a> </div>
+              </div>
+              <!-- /.row --> 
+            </li>
+            <!-- Menu Footer-->
+            <li class="user-footer">
+              <div class="pull-left"> <a href="" class="btn btn-default btn-flat">Profile</a> </div>
+              <div class="pull-right"> <a ng-click="logOut();" class="btn btn-default btn-flat">Sign out</a> </div>
+            </li>
+          </ul>
+        </li>
+        <!-- Control Sidebar Toggle Button -->
+        <li> <a href="" data-toggle="control-sidebar"><i class="fa fa-gears" style="padding-right:15px;"></i></a> </li>
+      </ul>
+    </div>
+    <form class="navbar-form navbar-right" role="search" style="margin-right: 70px; position: relative;">
+        <div class="form-group" style="margin-right: 20px;">
+              <input class="form-control" id="navbar-search-input" placeholder="Search" type="text">
+              <span><button class="fa fa-search btn btn-primary" style="height:32px;"></button></span>
+            </div>
+            <div id="image-dropdown" ng-mouseleave="hideee()">
+  <div class="img_holder" ng-click="myfuunc(this)" ng-mouseover="showww()">
+    <img class="flagimgs first" src="../assets/dist/img/french_flag.png" /><span>French</span>
+  </div>
+  <div class="img_holder" ng-click="myfuunc(this)" ng-mouseover="showww()">
+    <img class="flagimgs second" src="../assets/dist/img/german_flag.png" /><span>German</span>
+  </div>
+  <div class="img_holder" ng-click="myfuunc(this)" ng-mouseover="showww()">
+    <img class="flagimgs second" src="../assets/dist/img/spanish_flag.png" /> <span>Spanish</span>
+  </div>
+ 
+</div>
+            
+            
+      </form>
+  </nav>
+  <div class="navbar topMenu" ng-controller="dashboardController">
+    <div class="navbar-inner">
+      <div class="nav-collapse"> 
+        
+        <!-- Brand and toggle get grouped for better mobile display -->
+        <div class="navbar-header">
+          <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar-collapse-1"> <span class="sr-only">Toggle navigation</span> <span class="icon-bar"></span> <span class="icon-bar"></span> <span class="icon-bar"></span> </button>
+        </div>
+        
+        <!-- Collect the nav links, forms, and other content for toggling -->
+        <div class="collapse navbar-collapse" id="navbar-collapse-1">
+          <ul class="nav">
+            <li class="active"><a href="" ng-click="connectToWithings()"><i class="fa fa-dashboard"></i> Dashboard</a> </li>
+            <li class="dropdown dropdown-large"> <a href="" class="dropdown-toggle" data-toggle="dropdown"><i class="fa fa-user"></i> Patient Population Management<b class="caret"></b></a>
+              <ul class="dropdown-menu dropdown-menu-large row">
+                <li>
+                  <div class="col-sm-12">
+                    <form class="navbar-form navbar-left" role="search">
+                      <div class="form-group">
+                        <input class="form-control" id="navbar-search-input" placeholder="Search" type="text">
+                        <span>
+                        <button class="fa fa-search btn btn-primary" style="height:32px;"></button>
+                        </span> </div>
+                    </form>
+                  </div>
+                </li>
+                <li class="col-sm-5">
+                  <ul>
+                    <li class="dropdown-header">Patient</li>
+                    <li><a href="hospital_patientDetails.html">Patient Details</a></li>
+                    <li><a href="hospital_Background_Information.html">Self Assessment</a></li>
+                    <li><a href="hospital_addPatient.html">Add Patient</a></li>
+                  </ul>
+                </li>
+                <li class="col-sm-7">
+                  <ul>
+                    <li class="dropdown-header">Remote Patient Management{{service}}vin</li>
+                    <li><a href="">Collect Data</a></li>
+                    <li><a href="">Transmit Data</a></li>
+                    <li><a href="">Evaluate Data</a></li>
+                    <li><a href="">Notify 3<sup>rd</sup> Parties</a></li>
+                    <li><a href="">Intervene</a></li>
+                  </ul>
+                </li>
+                <li class="col-sm-7">
+                  <ul>
+                    <li class="dropdown-header"> Risk Management </li>
+                    <li><a href="hospital_viewPatientRisk.html">View Patient</a></li>
+                  </ul>
+                </li>
+              </ul>
+            </li>
+            <li class="dropdown"> <a href="" class="dropdown-toggle" data-toggle="dropdown"><i class="fa fa-medkit"></i> Device Management <b class="caret"></b></a>
+              <ul class="dropdown-menu">
+                <li>
+                  <form class="navbar-form navbar-left" role="search">
+                    <div class="form-group searchSmlNav">
+                      <input class="form-control" id="navbar-search-input" placeholder="Search" type="text">
+                      <span>
+                      <button class="fa fa-search btn btn-primary" style="height:32px;"></button>
+                      </span> </div>
+                  </form>
+                </li>
+                <li><a href="hospital_PatientDevices.html">Device Details</a></li>
+                <li><a href="hospital_AddPatientDeivce.html">Add Patient Device</a></li>
+                <li><a href="hospital_EditPatientDevice.html">Edit Patient Device</a></li>
+                <li><a href="hospital_DeletePatientDevice.html">Delete Patient Device</a></li>
+              </ul>
+            </li>
+            <li class="dropdown"> <a href="" class="dropdown-toggle" data-toggle="dropdown"><i class="fa fa-cloud-upload"></i> Patient Relationship Management<b class="caret"></b></a>
+              <ul class="dropdown-menu">
+                <li>
+                  <form class="navbar-form navbar-left" role="search">
+                    <div class="form-group searchSmlNav">
+                      <input class="form-control" id="navbar-search-input" placeholder="Search" type="text">
+                      <span>
+                      <button class="fa fa-search btn btn-primary" style="height:32px;"></button>
+                      </span> </div>
+                  </form>
+                </li>
+                <li><a href="hospital_Incoming_Communication.html">Incoming Communication</a></li>
+                <li><a href="hospital_chat.html">Chat</a></li>
+                <li><a href="hospital_videoChat.html">Video Chat</a></li>
+                <li><a href="hospital_ivrConfigurations.html">IVR Configuration</a></li>
+                <li><a href="hospital_email.html">Email</a></li>
+              </ul>
+            </li>
+            <!--<li class="dropdown">
+            <a href="" class="dropdown-toggle" data-toggle="dropdown"><i class="fa fa-commenting"></i>  Risk Management
+
+<b class="caret"></b></a>
+            <ul class="dropdown-menu">
+              <li><a href="hospital_viewPatientRisk.html">View Patient</a></li>
+            </ul>
+          </li>--> 
+            <!--logistics-->
+            <li class="dropdown dropdown-large"> <a href="" class="dropdown-toggle" data-toggle="dropdown"><i class="fa fa-bar-chart"></i>Logistics<b class="caret"></b></a>
+              <ul class="dropdown-menu dropdown-menu-large row" style="margin-left : 599px;">
+                <li>
+                  <div class="col-sm-12">
+                    <form class="navbar-form navbar-left" role="search">
+                      <div class="form-group">
+                        <input class="form-control" id="navbar-search-input" placeholder="Search" type="text">
+                        <span>
+                        <button class="fa fa-search btn btn-primary" style="height:32px;"></button>
+                        </span> </div>
+                    </form>
+                  </div>
+                </li>
+                <li class="col-sm-5">
+                  <ul>
+                    <li class="dropdown-header">Ambulatory Service Provider</li>
+                    <li><a href="hospital_Ambulatory_AddService.html">Add Service</a></li>
+                    <li><a href="hospital_Ambulatory_EditService.html">Edit Profile</a></li>
+                    <li><a href="hospital_Ambulatory_DeleteService.html">Delete Profile</a></li>
+                    <li><a href="hospital_Ambulatory_ViewMessages.html">View Messages</a></li>
+                    <li><a href="hospital_Ambulatory_ConfirmAction.html">Confirm Completed Action</a></li>
+                  </ul>
+                </li>
+                <li class="col-sm-7">
+                  <ul>
+                    <li class="dropdown-header">Towing Service Provider</li>
+                    <li><a href="Towing_Company_Messages.html">View Messages</a></li>
+                    <li><a href="Towing_Company_Add.html">Add Towing Company</a></li>
+                    <li><a href="Towing_Companies_List.html">Towing Companies</a></li>
+                  </ul>
+                </li>
+                <li class="col-sm-5">
+                  <ul>
+                    <li class="dropdown-header">Home Care Attendant</li>
+                    <!--<li><a href="">View Messages</a></li>-->
+                  </ul>
+                </li>
+                <li class="col-sm-5">
+                  <ul>
+                    <li class="dropdown-header">Nursing Care Attendant</li>
+                    <!--<li><a href="">View Messages</a></li>-->
+                  </ul>
+                </li>
+                <li class="col-sm-5">
+                  <ul>
+                    <li class="dropdown-header">Personal Care Attendant</li>
+                    <!--<li><a href="">View Messages</a></li>-->
+                  </ul>
+                </li>
+                <li class="col-sm-5">
+                  <ul>
+                    <li class="dropdown-header">Specialist Physician</li>
+                    <!--<li><a href="">View Messages</a></li>-->
+                  </ul>
+                </li>
+                <li class="col-sm-5">
+                  <ul>
+                    <li class="dropdown-header">Primary Physician</li>
+                    <!--<li><a href="">View Messages</a></li>-->
+                  </ul>
+                </li>
+                <li class="col-sm-5">
+                  <ul>
+                    <li class="dropdown-header">Single Point Of Contact</li>
+                    <!--<li><a href="">View Messages</a></li>-->
+                  </ul>
+                </li>
+              </ul>
+            </li>
+            
+            <!--Care Coordinator fa fa-user-md-->
+            <li class=" dropdown"> <a href="" class="dropdown-toggle" data-toggle="dropdown"><i class="fa fa-user-md"></i> Care Coordinator<b class="caret"></b></a>
+              <ul class="dropdown-menu">
+                <li>
+                  <form class="navbar-form navbar-left" role="search">
+                    <div class="form-group searchSmlNav">
+                      <input class="form-control" id="navbar-search-input" placeholder="Search" type="text" style="min-width:125px;">
+                      <span>
+                      <button class="fa fa-search btn btn-primary" style="height:32px;"></button>
+                      </span> </div>
+                  </form>
+                </li>
+                <li><a href="hospital_CareCoordinatorList.html">Manage Care Coordinator</a></li>
+                <li><a href="hospital_CareCoordinator_Patient.html">Patient Coordinator List</a></li>
+              </ul>
+            </li>
+            <!--Care Coordinator End -->
+          </ul>
+       
+          <div>
+		 	<script type="text/ng-template" id="myModalContent1.html">
+										<div class="modal-content">
+      <div class="modal-header">
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close"> <span aria-hidden="true">×</span></button>
+        <h4 class="modal-title">App Launcher</h4>
+      </div>
+      <div class="modal-body"> 
+        <!--				  Accordion -->
+        <div class="appPopup">
+          <div class="panel-group" id="accordion">
+            <div class="panel panel-default">
+              <div class="panel-heading">
+                <h4 data-toggle="collapse" data-parent="#accordion" href="#collapse1" class="panel-title expand">
+                  <div class="right-arrow pull-left">+</div>
+                  <a href="">All Apps</a> </h4>
+              </div>
+              <div id="collapse1" class="panel-collapse collapse in">
+                <div class="panel-body">
+                  <div class="row">
+                    <div class="col-md-4 col-sm-6 col-xs-12"> <a href="hospital_addPatient.html">
+                      <div class="info-box bg-gray"> <span class="info-box-icon"><i class="fa fa-comments-o"></i></span>
+                        <div class="info-box-content"> <span class="info-box-text"> Patient Population Management</span>
+                          <hr>
+                          <span class="progress-description"> Generate leads faster, and qualify and nurture prospects u... </span> </div>
+                        <!-- /.info-box-content --> 
+                      </div>
+                      </a> 
+                      <!-- /.info-box --> 
+                    </div>
+                    <div class="col-md-4 col-sm-6 col-xs-12"> <a href="hospital_PatientDevices.html">
+                      <div class="info-box bg-gray"> <span class="info-box-icon"><i class="fa fa-comments-o"></i></span>
+                        <div class="info-box-content"> <span class="info-box-text">Device Management</span>
+                          <hr>
+                          <span class="progress-description"> Generate leads faster, and qualify and nurture prospects u... </span> </div>
+                        <!-- /.info-box-content --> 
+                      </div>
+                      <!-- /.info-box --> 
+                    </div>
+                    <div class="col-md-4 col-sm-6 col-xs-12"> <a href="hospital_RP_Collect_Data.html">
+                      <div class="info-box bg-gray"> <span class="info-box-icon"><i class="fa fa-comments-o"></i></span>
+                        <div class="info-box-content"> <span class="info-box-text">Remote Patient Management</span>
+                          <hr>
+                          <span class="progress-description"> Generate leads faster, and qualify and nurture prospects u... </span> </div>
+                        <!-- /.info-box-content --> 
+                      </div>
+                      <!-- /.info-box --> 
+                    </div>
+                    <div class="col-md-4 col-sm-6 col-xs-12"> <a href="hospital_Incoming_Communication.html">
+                      <div class="info-box bg-gray"> <span class="info-box-icon"><i class="fa fa-comments-o"></i></span>
+                        <div class="info-box-content"> <span class="info-box-text">Patient Relationship Management</span>
+                          <hr>
+                          <span class="progress-description"> Generate leads faster, and qualify and nurture prospects u... </span> </div>
+                        <!-- /.info-box-content --> 
+                      </div>
+                      <!-- /.info-box --> 
+                    </div>
+                    <div class="col-md-4 col-sm-6 col-xs-12"> <a href="hospital_viewPatientRisk.html">
+                      <div class="info-box bg-gray"> <span class="info-box-icon"><i class="fa fa-comments-o"></i></span>
+                        <div class="info-box-content"> <span class="info-box-text">Risk Management</span>
+                          <hr>
+                          <span class="progress-description"> Generate leads faster, and qualify and nurture prospects u... </span> </div>
+                        <!-- /.info-box-content --> 
+                      </div>
+                      <!-- /.info-box --> 
+                    </div>
+                    <div class="col-md-4 col-sm-6 col-xs-12"> <a href="hospital_Ambulatory_AddService.html">
+                      <div class="info-box bg-gray"> <span class="info-box-icon"><i class="fa fa-comments-o"></i></span>
+                        <div class="info-box-content"> <span class="info-box-text">Logistics</span>
+                          <hr>
+                          <span class="progress-description"> Generate leads faster, and qualify and nurture prospects u... </span> </div>
+                        <!-- /.info-box-content --> 
+                      </div>
+                      <!-- /.info-box --> 
+                    </div>
+                    <div class="col-md-4 col-sm-6 col-xs-12"> <a href="hospital_CareCoordinatorList.html">
+                      <div class="info-box bg-gray"> <span class="info-box-icon"><i class="fa fa-comments-o"></i></span>
+                        <div class="info-box-content"> <span class="info-box-text">Care Coordinator</span>
+                          <hr>
+                          <span class="progress-description"> Generate leads faster, and qualify and nurture prospects u... </span> </div>
+                        <!-- /.info-box-content --> 
+                      </div>
+                      <!-- /.info-box --> 
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="panel-group" id="accordion">
+            <div class="panel panel-default">
+              <div class="panel-heading">
+                <h4 data-toggle="collapse" data-parent="#accordion" href="#collapse2" class="panel-title expand">
+                  <div class="right-arrow pull-left">+</div>
+                  <a href="">All Items</a> </h4>
+              </div>
+              <div id="collapse2" class="panel-collapse collapse in">
+                <div class="panel-body">
+                  <div class="row">
+                    <div class="col-md-12 col-sm-12 col-xs-12">
+                      <ul class="allAppUl">
+                        <li><a href="">Accounts</a></li>
+                        <li><a href="">Accounts</a></li>
+                        <li><a href="">Accounts</a></li>
+                        <li><a href="">Accounts</a></li>
+                        <li><a href="">Accounts</a></li>
+                        <li><a href="">Accounts</a></li>
+                        <li><a href="">Accounts</a></li>
+                        <li><a href="">Accounts</a></li>
+                        <li><a href="">Accounts</a></li>
+                        <li><a href="">Accounts</a></li>
+                        <li><a href="">Accounts</a></li>
+                        <li><a href="">Accounts</a></li>
+                        <li><a href="">Accounts</a></li>
+                        <li><a href="">Accounts</a></li>
+                        <li><a href="">Accounts</a></li>
+                        <li><a href="">Accounts</a></li>
+                      </ul>
+                      <!-- /.info-box --> 
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <!--				  Accordion  end--> 
+        
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-default pull-left" data-dismiss="modal">Close</button>
+        <button type="button" class="btn btn-danger">Save changes</button>
+      </div>
+    </div>
+								</script>
+								   <a href="" class="appIcon"data-target="#shift_model" data-toggle="modal" ng-click="open()"><i class="fa  fa-th"></i></a>
+			
+       	</div>
+           
+            
+             
+              
+                </div>
+        <!-- /.navbar-collapse --> 
+      </div>
+    </div>
+    <!-- /.navbar --></div>
+</header>
+<script>
+/*var shownnn = "yes";
+var dropd = document.getElementById("image-dropdown");
+
+function showww() {
+  dropd.style.height = "auto";
+  dropd.style.overflow = "y-scroll";
+}
+
+function hideee() {
+    dropd.style.height = "20px";
+    dropd.style.overflow = "hidden";
+  }
+  //dropd.addEventListener('mouseover', showOrHide, false);
+  //dropd.addEventListener('click',showOrHide , false);
+
+
+function myfuunc(imgParent) {
+  hideee();
+  var mainDIVV = document.getElementById("image-dropdown");
+  imgParent.parentNode.removeChild(imgParent);
+  mainDIVV.insertBefore(imgParent, mainDIVV.childNodes[0]);
+} */
+</script>

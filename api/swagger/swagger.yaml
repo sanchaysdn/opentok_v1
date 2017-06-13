@@ -1,0 +1,468 @@
+basePath: /api/v1
+consumes: [application/json]
+definitions:
+  ErrorResponse:
+    properties:
+      message: {type: string}
+    required: [message]
+  HelloWorldResponse:
+    properties:
+      message: {type: string}
+    required: [message]
+  addPatient:
+    properties:
+      first_name: {type: string}
+      last_name: {type: string}
+      middle_name: {type: string}
+      primary_provider: {type: string}
+      status: {type: boolean}
+      suffix: {type: string}
+      title: {type: string}
+    type: object
+  addPatientDemographics:
+    properties:
+      SSN: {type: string}
+      city: {type: string}
+      country: {type: string}
+      date_of_birth: {type: string}
+      ethnicity: {type: string}
+      gender: {type: string}
+      preferred_language: {type: string}
+      race: {type: string}
+      state: {type: string}
+      street_address: {type: string}
+      zip_code: {type: string}
+    type: object
+  addPatientDevice:
+    properties:
+      description: {type: string}
+      deviceName: {type: string}
+      deviceType: {type: string}
+      make: {type: string}
+      model: {type: string}
+    type: object
+  addPatientDisease:
+    items:
+      properties:
+        datetime_diagnosed: {type: string}
+        disease_id: {type: string}
+        status: {type: string}
+      type: object
+    type: array
+  addPatientEncounter:
+    properties:
+      address: {type: string}
+      city: {type: string}
+      country: {type: string}
+      diagnosis:
+        items: {type: object}
+        type: array
+      encounter_date: {type: string}
+      hospital: {type: string}
+      provider: {type: string}
+      state: {type: string}
+      zip_code: {type: string}
+    type: object
+  addPatientInsuranceDetails:
+    properties:
+      card_expiry_date: {type: string}
+      card_issue_date: {type: string}
+      group_name: {type: string}
+      group_number: {type: string}
+      insurance_company: {type: string}
+      insurance_id_no: {type: string}
+      plan_name: {type: string}
+      plan_type: {type: string}
+    type: object
+  addPatientMedication:
+    properties:
+      medication:
+        items: {type: object}
+        type: array
+      prescribed_by: {type: string}
+      refill_date: {type: string}
+      start_date: {type: string}
+      status: {type: string}
+      stop_date: {type: string}
+    type: object
+  addPatientVitals:
+    properties:
+      bloodPressure:
+        items:
+          properties:
+            maxValue: {type: string}
+            minValue: {type: string}
+          type: object
+        type: array
+      body_temperature: {type: string}
+      po2: {type: string}
+      pulse_rate: {type: string}
+    type: object
+  appResponse:
+    properties:
+      code: {type: number}
+      message: {type: string}
+    required: [code]
+  login:
+    properties:
+      email: {type: string}
+      password: {type: string}
+    type: object
+  orderLabTest:
+    properties:
+      cc: {type: string}
+      city: {type: string}
+      country: {type: string}
+      description: {type: string}
+      from: {type: string}
+      lab_address: {type: string}
+      lab_name: {type: string}
+      state: {type: string}
+      subject: {type: string}
+      to: {type: string}
+      zip_code: {type: string}
+    type: object
+  prescribeMedication:
+    properties:
+      cc: {type: string}
+      city: {type: string}
+      contact_number: {type: string}
+      country: {type: string}
+      delivery_address: {type: string}
+      from: {type: string}
+      medication:
+        items: {type: object}
+        type: array
+      patient_name: {type: string}
+      patient_ssn: {type: string}
+      pharmacy_name: {type: string}
+      state: {type: string}
+      subject: {type: string}
+      to: {type: string}
+      zip_code: {type: string}
+    type: object
+  withingsCallback:
+    properties:
+      oauth_verifier: {type: string}
+      uid: {type: string}
+      userid: {type: string}
+    type: object
+host: localhost:5063
+info: {title: IOTied App, version: 0.0.1}
+paths:
+  /api/addPatient:
+    post:
+      description: Add Patient
+      operationId: addPatient
+      parameters:
+      - description: Add Patient Information
+        in: body
+        name: body
+        required: true
+        schema: {$ref: '#/definitions/addPatient'}
+      responses:
+        '200':
+          description: Success
+          schema: {$ref: '#/definitions/appResponse'}
+        default:
+          description: Error
+          schema: {$ref: '#/definitions/ErrorResponse'}
+      summary: Add Patient
+      tags: [Patient Module]
+    x-swagger-router-controller: patient
+  /api/addPatientDemographics:
+    post:
+      description: Add Patient Demographics
+      operationId: addPatientDemographics
+      parameters:
+      - description: Add Patient Demographics
+        in: body
+        name: body
+        required: true
+        schema: {$ref: '#/definitions/addPatientDemographics'}
+      responses:
+        '200':
+          description: Success
+          schema: {$ref: '#/definitions/appResponse'}
+        default:
+          description: Error
+          schema: {$ref: '#/definitions/ErrorResponse'}
+      summary: Add Patient Demographics
+      tags: [Patient Module]
+    x-swagger-router-controller: patient
+  /api/addPatientDevice:
+    post:
+      description: Add Patient Device
+      operationId: addPatientDevice
+      parameters:
+      - description: Add Patient Device
+        in: body
+        name: body
+        required: true
+        schema: {$ref: '#/definitions/addPatientDevice'}
+      responses:
+        '200':
+          description: Success
+          schema: {$ref: '#/definitions/appResponse'}
+        default:
+          description: Error
+          schema: {$ref: '#/definitions/ErrorResponse'}
+      summary: Add Patient Device
+      tags: [Patient Module]
+    x-swagger-router-controller: patient
+  /api/addPatientDisease:
+    post:
+      description: Add Patient Disease
+      operationId: addPatientDisease
+      parameters:
+      - description: Add Patient Disease
+        in: body
+        name: body
+        required: true
+        schema: {$ref: '#/definitions/addPatientDisease'}
+      responses:
+        '200':
+          description: Success
+          schema: {$ref: '#/definitions/appResponse'}
+        default:
+          description: Error
+          schema: {$ref: '#/definitions/ErrorResponse'}
+      summary: Add Patient Disease
+      tags: [Patient Module]
+    x-swagger-router-controller: patient
+  /api/addPatientEncounter:
+    post:
+      description: Add Patient Encounter
+      operationId: addPatientEncounter
+      parameters:
+      - description: Add Patient Encounter
+        in: body
+        name: body
+        required: true
+        schema: {$ref: '#/definitions/addPatientEncounter'}
+      responses:
+        '200':
+          description: Success
+          schema: {$ref: '#/definitions/appResponse'}
+        default:
+          description: Error
+          schema: {$ref: '#/definitions/ErrorResponse'}
+      summary: Add Patient Encounter
+      tags: [Patient Module]
+    x-swagger-router-controller: patient
+  /api/addPatientInsuranceDetails:
+    post:
+      description: Add Patient Insurance
+      operationId: addPatientInsuranceDetails
+      parameters:
+      - description: Add Patient Insurance
+        in: body
+        name: body
+        required: true
+        schema: {$ref: '#/definitions/addPatientInsuranceDetails'}
+      responses:
+        '200':
+          description: Success
+          schema: {$ref: '#/definitions/appResponse'}
+        default:
+          description: Error
+          schema: {$ref: '#/definitions/ErrorResponse'}
+      summary: Add Patient Insurance
+      tags: [Patient Module]
+    x-swagger-router-controller: patient
+  /api/addPatientMedication:
+    post:
+      description: Add Patient Medication
+      operationId: addPatientMedication
+      parameters:
+      - description: Add Patient Medication
+        in: body
+        name: body
+        required: true
+        schema: {$ref: '#/definitions/addPatientMedication'}
+      responses:
+        '200':
+          description: Success
+          schema: {$ref: '#/definitions/appResponse'}
+        default:
+          description: Error
+          schema: {$ref: '#/definitions/ErrorResponse'}
+      summary: Add Patient Medication
+      tags: [Patient Module]
+    x-swagger-router-controller: patient
+  /api/addPatientVitals:
+    post:
+      description: Add Patient Vitals
+      operationId: addPatientVitals
+      parameters:
+      - description: Add Patient Vitals
+        in: body
+        name: body
+        required: true
+        schema: {$ref: '#/definitions/addPatientVitals'}
+      responses:
+        '200':
+          description: Success
+          schema: {$ref: '#/definitions/appResponse'}
+        default:
+          description: Error
+          schema: {$ref: '#/definitions/ErrorResponse'}
+      summary: Add Patient Vitals
+      tags: [Patient Module]
+    x-swagger-router-controller: patient
+  /api/getAllPatient:
+    get:
+      description: Get Patient List
+      operationId: getAllPatient
+      responses:
+        '200':
+          description: Success
+          schema: {$ref: '#/definitions/appResponse'}
+        default:
+          description: Error
+          schema: {$ref: '#/definitions/ErrorResponse'}
+      summary: Get Patient List
+      tags: [Patient Module]
+    x-swagger-router-controller: patient
+  /api/getPatientDevice:
+    get:
+      description: Get Patient Device List
+      operationId: getPatientDevice
+      responses:
+        '200':
+          description: Success
+          schema: {$ref: '#/definitions/appResponse'}
+        default:
+          description: Error
+          schema: {$ref: '#/definitions/ErrorResponse'}
+      summary: Get Patient Device List
+      tags: [Patient Module]
+    x-swagger-router-controller: patient
+  /api/orderLabTest/{id}:
+    post:
+      description: Order Lab Test
+      operationId: orderLabTest
+      parameters:
+      - {description: Order Lab Test, in: path, name: id, required: true, type: string}
+      - description: Order Lab Test
+        in: body
+        name: body
+        required: true
+        schema: {$ref: '#/definitions/orderLabTest'}
+      responses:
+        '200':
+          description: Success
+          schema: {$ref: '#/definitions/appResponse'}
+        default:
+          description: Error
+          schema: {$ref: '#/definitions/ErrorResponse'}
+      summary: Order Lab Test
+      tags: [Patient Module]
+    x-swagger-router-controller: patient
+  /api/prescribeMedication/{id}:
+    post:
+      description: Add Prescribe Medication
+      operationId: prescribeMedication
+      parameters:
+      - {description: Prescribe Medication, in: path, name: id, required: true, type: string}
+      - description: Add Prescribe Medication
+        in: body
+        name: body
+        required: true
+        schema: {$ref: '#/definitions/prescribeMedication'}
+      responses:
+        '200':
+          description: Success
+          schema: {$ref: '#/definitions/appResponse'}
+        default:
+          description: Error
+          schema: {$ref: '#/definitions/ErrorResponse'}
+      summary: Add Prescribe Medication
+      tags: [Patient Module]
+    x-swagger-router-controller: patient
+  /auth/login:
+    post:
+      description: authenticate user
+      operationId: login
+      parameters:
+      - description: login credentials
+        in: body
+        name: body
+        required: true
+        schema: {$ref: '#/definitions/login'}
+      responses:
+        '200':
+          description: Success
+          schema: {$ref: '#/definitions/appResponse'}
+        default:
+          description: Error
+          schema: {$ref: '#/definitions/ErrorResponse'}
+      summary: Login
+      tags: [auth]
+    x-swagger-router-controller: auth
+  /auth/logout:
+    get:
+      description: Logout
+      operationId: logOut
+      responses:
+        '200':
+          description: Success
+          schema: {$ref: '#/definitions/appResponse'}
+        default:
+          description: Error
+          schema: {$ref: '#/definitions/ErrorResponse'}
+      summary: Logout
+      tags: [auth]
+    x-swagger-router-controller: auth
+  /opentok/createSession:
+    get:
+      description: createSession
+      operationId: createSession
+      responses:
+        '200':
+          description: Success
+          schema: {$ref: '#/definitions/appResponse'}
+        default:
+          description: Error
+          schema: {$ref: '#/definitions/ErrorResponse'}
+      summary: createSession
+      tags: [opentok]
+    x-swagger-router-controller: opentok
+  /swagger: {x-swagger-pipe: swagger_raw}
+  /withings/callback:
+    post:
+      description: Withings Auth Callback
+      operationId: oauth_callback
+      parameters:
+      - description: Withings callback url
+        in: body
+        name: body
+        required: true
+        schema: {$ref: '#/definitions/withingsCallback'}
+      responses:
+        '200':
+          description: Success
+          schema: {$ref: '#/definitions/appResponse'}
+        default:
+          description: Error
+          schema: {$ref: '#/definitions/ErrorResponse'}
+      summary: Withings Auth Callback
+      tags: [withings]
+    x-swagger-router-controller: withings
+  /withings/connect:
+    get:
+      description: Withings Auth Request
+      operationId: authRequest
+      responses:
+        '200':
+          description: Success
+          schema: {$ref: '#/definitions/appResponse'}
+        default:
+          description: Error
+          schema: {$ref: '#/definitions/ErrorResponse'}
+      summary: Withings Auth Request
+      tags: [withings]
+    x-swagger-router-controller: withings
+produces: [application/json]
+schemes: [http, https]
+swagger: '2.0'
